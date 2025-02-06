@@ -1,0 +1,21 @@
+The following CSS uses a more robust approach that handles inconsistencies:
+
+```css
+.button {
+  background-color: lightblue;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none; /* Reset default outline */
+}
+
+.button:focus {
+  background-color: lightgreen; /* Fallback focus style */
+  box-shadow: 0 0 5px rgba(0, 128, 0, 0.3); /* Subtle shadow for all focus */
+}
+
+/* Optional: Add JavaScript to conditionally enhance styles for :focus-visible  when supported by the browser  */
+```
+
+This approach provides a base focus style that all browsers will respect and can be improved upon with JS to selectively add more styling for browsers where `:focus-visible` is correctly implemented.
