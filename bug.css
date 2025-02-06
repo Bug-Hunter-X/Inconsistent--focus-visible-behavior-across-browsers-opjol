@@ -1,0 +1,19 @@
+The following CSS code snippet demonstrates an unusual issue where the expected behavior of the `:focus-visible` pseudo-class is not consistently observed across different browsers.
+
+```css
+.button {
+  background-color: lightblue;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:focus-visible {
+  background-color: lightgreen;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+}
+```
+
+This code should change the background color and add a box-shadow to the button element when it receives focus, but only if the focus is programmatically triggered or otherwise not the result of a default browser action (like tabbing through elements).  However, inconsistent behavior might arise due to browser differences in focus-visible implementation and handling of custom styles or the presence of other scripts or CSS rules affecting focus.
